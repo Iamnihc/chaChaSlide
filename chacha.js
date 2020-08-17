@@ -18,7 +18,17 @@ var config = {
 window.onload = (event) => {
     let boxes = document.getElementsByClassName(divName);
     let boxContainer = document.getElementById(containerName);
-    importStyle = `
+
+
+    console.log(boxes)
+    for (var item of boxes){
+        console.log(item);
+        let totalSize = 0;
+        // temporary, fix this later
+        if (item.getAttribute("size") == null){item.setAttribute("size","100")}
+        
+    }
+    let importStyle = `
     .${divName}{
         width:100%;
         height:100%;
@@ -46,15 +56,8 @@ window.onload = (event) => {
 
     }
     `
+    // this has to be the last line on both onEvents
     boxStyles = "<style id='boxStyleSheet'>"+ importStyle +" </style>";
-    console.log(boxes)
-    for (var item of boxes){
-        console.log(item);
-        // temporary, fix this later
-        if (item.getAttribute("size") == null){item.setAttribute("size","100")}
-
-    }
-    console.log(0)
     $("head").append(boxStyles);
     
 
