@@ -1,17 +1,22 @@
-const divName = "chachabox";
-const containerName = "chachacontainer"
-// paste css here!
-var config = {
+
+
+const config = {
+    // name of each box div class
+    divName = "chachabox",
+    // id of main container
+    containerName = "chachacontainer",
     // updates on window resize
     rescaling:true,
     // boxes fill height
     largeBoxes:true,
     // multiple boxes per screen? setting this to false overrides the sizes given 
     multi:true,
-    //
+    // an arrow to show that u can scroll
     arrow: true,
+    // click when scrolling
     snapBoxes: true,
-    overflowBoxes:false,
+    // allow boxes to go off page
+    overFlowBoxes:false,
 
 }
 
@@ -20,12 +25,13 @@ window.onload = (event) => {
     let boxContainer = document.getElementById(containerName);
 
 
-    console.log(boxes)
+    console.log(boxes);
+    let totalSize = 0;
     for (var item of boxes){
         console.log(item);
-        let totalSize = 0;
         // temporary, fix this later
         if (item.getAttribute("size") == null){item.setAttribute("size","100")}
+        totalSize+=item.getAttribute(size);
         
     }
     let importStyle = `
