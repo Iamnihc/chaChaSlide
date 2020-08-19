@@ -40,10 +40,12 @@ window.onload = (event) => {
         height:100%;
     }
     #${containerName}{
-        display: flex;
+        display: grid;
         flex-direction: row;
         width:100%;
         height:100%;
+        grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+        grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
     }
     body{
         width:100%;
